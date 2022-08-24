@@ -1,0 +1,21 @@
+{% load static %}
+
+<img src="{% static "images/patient.png" %}" width="300" height="150" alt="Image Not found"/>
+<html>
+<head>
+</head>
+<link rel="stylesheet" href="{% static "stylesheet/style.css" %}"/>
+<body>
+<h1>REGISTRATION FORM</h1>
+<h3>please fill below registration form</h3>
+<form method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="register">
+</form>
+
+
+</body>
+
+
+</html>

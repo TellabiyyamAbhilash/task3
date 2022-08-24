@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <img src="{% static "images/blog.png" %}" width="100" height="100" alt="Image Not found"/><br>
+
+    <form method="POST">
+      <table>
+        Doctor : {{appointment.doctor.FirstName}}<br><br>
+        Date : {{appointment.date}}<br>
+        time : {{appointment.time}}<br>
+        <br>
+      </table>
+      {%csrf_token%}
+    </form>
+<a href="{% url 'showblogs' %}"> <button type="button" name="button">SHOW BLOGS </button> </a><br><br>
+    <br><br>
+    <a href="/"> <button type='button' name="all">HOME PAGE</button> </a>
+  </body>
+</html>

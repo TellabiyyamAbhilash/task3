@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <img src="{% static "images/blog.png" %}" width="100" height="100" alt="Image Not found"/><br>
+
+    <form method="POST">
+      <table>
+
+        Category : {{blog.category.name}}<br><br>
+        Title : {{blog.title}}<br>
+        Image : {{blog.image}}<br>
+        Summary : {{blog.summary}}<br>
+        Content : {{blog.content}}<br>
+
+
+        <br>
+      </table>
+
+      {%csrf_token%}
+    </form>
+
+    <br><br>
+    <a href="{% url 'showblogs' %}"> <button type='button' name="all">SHOW ALL</button> </a>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <img src="{% static "images/blog.png" %}" width="300" height="150" alt="Image Not found"/><br>
+    <table border="5">
+      <tr>
+        <th>profilepicture</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>BOOK</th>
+      </tr>
+    {% for s in doctor_list %}
+    <tr>
+      <td>{{s.profilepicture}}</td>
+      <td>{{s.FirstName}}</td>
+      <td>{{s.LastName}} </td>
+      <td>  <a href="{% url 'addappointment' %}"><button type="button" name="Book">Book Aptment</button></a></td>
+    </tr>
+    {% endfor %}
+    <br>
+  
+  </body>
+</html>

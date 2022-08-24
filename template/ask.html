@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="doc_details/{{m}}/"> <button type="button" name="button">MY DETAILS</button> </a><br><br>
+    <h2>Want to add post</h2>
+    <a href="{% url 'addblog' %}"> <button type="button" name="button"> Add BLOG</button> </a>
+    <br><br>
+    <h2>Want to read blogs</h2>
+    <a href="{% url 'showblogs' %}"> <button type="button" name="button"> READ </button> </a>
+    <h2>Show Apointments</h2>
+    <a href=""> <button type="button" name="button">SHOW</button> </a>
+
+{%csrf_token%}
+  </body>
+</html>

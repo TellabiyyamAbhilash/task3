@@ -1,0 +1,23 @@
+{% load static %}
+
+<img src="{% static "images/doctor.png" %}" width="300" height="150" alt="Image Not found"/><br>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>detail page</title>
+  </head>
+  <body> <br>
+    <br><br>
+    ID : {{doctor.user_id}}<br>
+    First Name : {{doctor.FirstName}}<br>
+    Last Name : {{doctor.LastName}}<br>
+    profile : {{doctor.profilepicture}}<br>
+    Address:line1 : {{doctor.Address_line1}}<br>
+    city : {{doctor.city}}<br>
+    state : {{doctor.state}}<br>
+    pincode : {{doctor.pincode}}<br>
+
+  </body>
+</html>

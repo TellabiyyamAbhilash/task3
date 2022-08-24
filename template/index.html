@@ -1,0 +1,15 @@
+{% load static %}
+
+<img src="{% static "images/welcome.png" %}" width="400" height="150" alt="Image Not found"/><br>
+
+
+{% if user.is_authenticated %}
+<img src="{% static "images/logout.jpg" %}" width="100" height="45" alt="Image Not found"/><br>
+<a href="{% url 'logout' %}"> <button type="button" name="button"> Logout </button></a> <br>
+{% else %}
+<img src="{% static "images/register.jpg" %}" width="100" height="45" alt="Image Not found"/><br>
+<a href="{% url 'register' %}"> <button type="button" name="button"> Register </button> </a> <br><br>
+<img src="{% static "images/logoin.png" %}" width="70" height="35" alt="Image Not found"/><br>
+<a href="{% url 'doctorlogin' %}"> <button type="button" name="button"> Login Doctor </button> </a><br><br>
+<a href="{% url 'patientlogin' %}"> <button type="button" name="button"> Login Patient </button> </a>
+{% endif %}
